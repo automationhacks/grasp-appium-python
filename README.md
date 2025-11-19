@@ -4,13 +4,25 @@
 
 This project provides examples on how appium can be used to automate an android/iOS app
 
+## Context
+
+- Appium supports different drivers, plugins and clients, depending on your use case, you may want to take a look at [Appium docs](https://appium.io/docs/en/latest/ecosystem/)
+
 ## Setup
 
-- This project uses python uv, to install it run:
+- This project uses python `uv` as the python package manager, to install it run:
 
 ```commandline
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
+
+Followed by:
+
+```aiignore
+uv pip install
+```
+
+This should install dependencies specified in pyproject.toml file
 
 ```aiignore
 npm install -g appium 
@@ -47,4 +59,6 @@ Other pre-requisites to run the test
   "appium:appActivity": "io.appium.android.apis.ApiDemos"
 }
 ```
+
+- After this, you can interact with your application and then identify the element you require
 
