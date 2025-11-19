@@ -12,7 +12,6 @@ This project provides examples on how appium can be used to automate an android/
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-
 ```aiignore
 npm install -g appium 
 ```
@@ -24,6 +23,28 @@ Other pre-requisites to run the test
 - JAVA_HOME setup done
 - AVD (Android virtual device) open with desired API levels
 - If real device, developer options enabled with USB debugging enabled
+- Install Appium inspector
 
+## Application under test (AUT)
 
+- We'll use Android API demoes app maintained in appium project. You can find the
+  repo [here](https://github.com/appium/android-apidemos). After cloning, open this project in Android studio and then
+  build the app, you'll see the APK file in `apks/ApiDemos-debug.apk` which can be used to install on a test emulator
+
+## Testing process
+
+- Identify test steps
+- Open Appium inspector and update below payload to start an Appium inspection session, here i'm assuming that you already have an emulator created with Android 16 version
+
+```aiignore
+{
+  "platformName": "android",
+  "appium:automationName": "uiautomator2",
+  "appium:platformVersion": "16",
+  "appium:deviceName": "emulator-5554",
+  "appium:app": "<path_to_cloned_repo>/android-apidemos/apks/ApiDemos-debug.apk",
+  "appium:appPackage": "io.appium.android.apis",
+  "appium:appActivity": "io.appium.android.apis.ApiDemos"
+}
+```
 
