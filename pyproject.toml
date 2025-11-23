@@ -1,7 +1,7 @@
 [project]
 name = "grasp-appium-python"
 version = "0.1.0"
-description = "Add your description here"
+description = "Appium python API demos via learning tests"
 requires-python = ">=3.13"
 dependencies = [
     "appium-python-client>=5.2.4",

@@ -62,3 +62,21 @@ Other pre-requisites to run the test
 
 - After this, you can interact with your application and then identify the element you require
 
+## Appium actions
+
+- tap
+- scroll
+- enter_text
+
+### Checks
+
+- displayed
+- selected
+- scrollable
+- long clickable
+- focussed
+- focusable
+- enabled
+- clickable
+- checked
+- checkable
