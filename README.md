@@ -6,7 +6,8 @@ This project provides examples on how appium can be used to automate an android/
 
 ## Context
 
-- Appium supports different drivers, plugins and clients, depending on your use case, you may want to take a look at [Appium docs](https://appium.io/docs/en/latest/ecosystem/)
+- Appium supports different drivers, plugins and clients, depending on your use case, you may want to take a look
+  at [Appium docs](https://appium.io/docs/en/latest/ecosystem/)
 
 ## Setup
 
@@ -39,14 +40,15 @@ Other pre-requisites to run the test
 
 ## Application under test (AUT)
 
-- We'll use Android API demoes app maintained in appium project. You can find the
+- We'll use Android API demo's app maintained in appium project. You can find the
   repo [here](https://github.com/appium/android-apidemos). After cloning, open this project in Android studio and then
   build the app, you'll see the APK file in `apks/ApiDemos-debug.apk` which can be used to install on a test emulator
 
 ## Testing process
 
 - Identify test steps
-- Open Appium inspector and update below payload to start an Appium inspection session, here i'm assuming that you already have an emulator created with Android 16 version
+- Open Appium inspector and update below payload to start an Appium inspection session, here i'm assuming that you
+  already have an emulator created with Android 16 version
 
 ```aiignore
 {
@@ -80,3 +82,11 @@ Other pre-requisites to run the test
 - clickable
 - checked
 - checkable
+
+## Selector/Locators
+
+### Android
+
+- `UiSelector`:
+  Read [this](https://github.com/appium/appium-uiautomator2-driver/blob/master/docs/uiautomator-uiselector.md) guide to
+  see how UiSelector can be used to find element by text or scroll, its performance is quite close to native
