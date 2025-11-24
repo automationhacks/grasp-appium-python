@@ -28,7 +28,7 @@ class AppLaunchTest(unittest.TestCase):
         if self.driver:
             self.driver.quit()
 
-    def type_text_in_textbox_test(self) -> None:
+    def test_scroll_and_type_text_in_textbox(self) -> None:
         views_button = self.driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Views")')
         views_button.click()
 
@@ -47,12 +47,12 @@ class AppLaunchTest(unittest.TestCase):
         text_fields_button = self.driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("TextFields")')
         text_fields_button.click()
 
-        text_textbox = self.driver.find_element(AppiumBy.ID, 'new UiSelector().resourceId("io.appium.android.apis:id/edit1")')
+        text_textbox = WebDriverWait(self.driver, 10).until(ec.visibility_of_element_located((AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("io.appium.android.apis:id/edit1")')))
         text_to_type = 'Appium UI automator is awesome!'
         text_textbox.send_keys(text_to_type)
 
         alert_title_elem = WebDriverWait(self.driver, 10).until(ec.visibility_of_element_located(
-            (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("io.appium.android.apis:id/edit1")')))
+            (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("io.appium.android.apis:id/edit1Text")')))
 
         if alert_title_elem.is_displayed():
             dialog_text = alert_title_elem.get_attribute('text')
