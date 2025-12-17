@@ -79,6 +79,7 @@ for [test_app_opens.py](src/tests/android/uiautomator2/test_app_opens.py)
 - [App launch and close](src/tests/android/uiautomator2/test_app_activate_terminate.py) launches and closes the app
   while checking for the app state as well
 - [Check if keyboard is shown and hide it](src/tests/android/uiautomator2/test_hide_keyboard.py)
+- [Push a file to device and pull it back](src/tests/android/uiautomator2/test_push_pull_file.py)
 
 ## Appium actions
 
