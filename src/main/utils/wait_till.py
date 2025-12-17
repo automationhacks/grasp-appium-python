@@ -1,7 +1,7 @@
 import time
 
 
-def wait_till(expected, timeout, sleep_for, sleep_factor, func, *args):
+def wait_till(expected, func, *args, timeout=10, sleep_for=2, sleep_factor=0.5):
     start_time = time.time()
     sleep_time = sleep_for
 

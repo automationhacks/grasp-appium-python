@@ -29,17 +29,17 @@ class AppInstallUninstallTest(unittest.TestCase):
             self.driver.quit()
 
     def test_dialog_text_is_correct(self) -> None:
-        wait_till(True, 10, 2, 0.5, self.is_api_demos_installed, None)
+        wait_till(True, self.is_api_demos_installed, None)
         is_app_installed = self.is_api_demos_installed()
         self.assertEqual(is_app_installed, True, 'Oh oh, app is not installed?')
 
         self.driver.remove_app("io.appium.android.apis")
-        wait_till(False, 10, 2, 0.5, self.is_api_demos_installed, None)
+        wait_till(False, self.is_api_demos_installed, None)
         is_app_installed = self.is_api_demos_installed()
         self.assertEqual(is_app_installed, False, 'Oh oh, app is installed?')
 
         self.driver.install_app("/Users/gauravsingh/self/android-apidemos/apks/ApiDemos-debug.apk")
-        wait_till(True, 10, 2, 0.5, self.is_api_demos_installed, None)
+        wait_till(True, self.is_api_demos_installed, None)
         is_app_installed = self.is_api_demos_installed()
         self.assertEqual(is_app_installed, True, 'Oh oh, duh app is not installed again?')
 
