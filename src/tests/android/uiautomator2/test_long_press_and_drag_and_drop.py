@@ -1,14 +1,12 @@
 import pytest
-from appium.webdriver.common.appiumby import AppiumBy
-from appium.webdriver.extensions.action_helpers import ActionHelpers
-from assertpy import assert_that
-
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.appium_service import AppiumService
+from appium.webdriver.common.appiumby import AppiumBy
+from assertpy import assert_that
 from selenium.webdriver import ActionChains
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.wait import WebDriverWait
 
 APPIUM_PORT = 4723
 APPIUM_HOST = '127.0.0.1'
