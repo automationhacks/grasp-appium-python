@@ -19,7 +19,7 @@ capabilities = {
 appium_server_url = 'http://localhost:4723'
 
 
-class AppLaunchTest(unittest.TestCase):
+class TapAndGetTextFromAnElementTest(unittest.TestCase):
     def setUp(self) -> None:
         load_capabilities = UiAutomator2Options().load_capabilities(capabilities)
         self.driver = webdriver.Remote(appium_server_url, options=load_capabilities)

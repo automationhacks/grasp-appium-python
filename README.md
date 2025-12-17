@@ -64,11 +64,28 @@ Other pre-requisites to run the test
 
 - After this, you can interact with your application and then identify the element you require
 
+See a hello world case that launches the app and verifies if the main screen is displayed
+for [test_app_opens.py](src/tests/android/uiautomator2/test_app_opens.py)
+
+## Appium Setup
+
+- [test_current_activity.py](src/tests/android/uiautomator2/test_current_activity.py) shows use of Appium Service to
+  start Appium service, get a driver instance and then get current activity of the app
+
+## Appium protocol
+
+- [App install and uninstall](src/tests/android/uiautomator2/test_app_install_uninstall.py) uninstalls and installs the
+  app
+- [App launch and close](src/tests/android/uiautomator2/test_app_activate_terminate.py) launches and closes the app
+  while checking for the app state as well
+
 ## Appium actions
 
 - tap
-- scroll
+- [scroll](src/tests/android/uiautomator2/test_scroll_and_type_text_in_textbox.py) shows how to use Android `UiScrollable` to scroll to an element
 - enter_text
+- [drag_and_drop](src/tests/android/uiautomator2/test_long_press_and_drag_and_drop.py) shows how to long press and then
+  drag and drop a UI component using ActionChains class
 
 ### Checks
 

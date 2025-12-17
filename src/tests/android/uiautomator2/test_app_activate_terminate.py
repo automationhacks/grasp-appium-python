@@ -1,5 +1,4 @@
 import unittest
-from time import sleep
 
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
@@ -25,7 +24,9 @@ appium_server_url = 'http://localhost:4723'
 class AppActivateTerminateTest(unittest.TestCase):
     """
     Test class to verify app activate and terminate functionality.
+    It also queries the app state to ensure correct behavior.
     """
+
     def setUp(self) -> None:
         load_capabilities = UiAutomator2Options().load_capabilities(capabilities)
         self.driver = webdriver.Remote(appium_server_url, options=load_capabilities)
@@ -42,10 +43,17 @@ class AppActivateTerminateTest(unittest.TestCase):
         self.driver.terminate_app('io.appium.android.apis')
         WebDriverWait(self.driver, 10).until(
             ec.invisibility_of_element((AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("API Demos")')))
+        # 0 Not installed
+        # 1 Not running
+        # 2 Running in background suspended
+        # 3 Running in background
+        # 4 Running in foreground
+        self.assertEqual(self.driver.query_app_state('io.appium.android.apis'), 1, 'App is not in terminated state')
 
         self.driver.activate_app('io.appium.android.apis')
         WebDriverWait(self.driver, 10).until(
             ec.visibility_of_element_located((AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("API Demos")')))
+        self.assertEqual(self.driver.query_app_state('io.appium.android.apis'), 4, 'App is not in foreground state')
 
         elem = self.driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("API Demos")')
         self.assertEqual(elem.is_displayed(), True)

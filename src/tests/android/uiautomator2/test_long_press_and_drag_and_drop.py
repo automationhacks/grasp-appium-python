@@ -40,7 +40,7 @@ def android_driver():
     driver.quit()
 
 
-def test_get_current_activity(appium_service, android_driver_factory):
+def test_long_press_and_drag_and_drop(appium_service, android_driver_factory):
     custom_opts = {'appium:app': '/Users/gauravsingh/self/android-apidemos/apks/ApiDemos-debug.apk',
                    'appium:deviceName': 'emulator-5554'}
     with android_driver_factory(custom_opts) as driver:
