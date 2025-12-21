@@ -67,19 +67,18 @@ Other pre-requisites to run the test
 See a hello world case that launches the app and verifies if the main screen is displayed
 for [test_app_opens.py](src/tests/android/uiautomator2/test_app_opens.py)
 
-## Appium Setup
+## Appium recipes
 
 - [test_current_activity.py](src/tests/android/uiautomator2/test_current_activity.py) shows use of Appium Service to
   start Appium service, get a driver instance and then get current activity of the app
-
-## Appium protocol
-
 - [App install and uninstall](src/tests/android/uiautomator2/test_app_install_uninstall.py) uninstalls and installs the
   app
 - [App launch and close](src/tests/android/uiautomator2/test_app_activate_terminate.py) launches and closes the app
   while checking for the app state as well
 - [Check if keyboard is shown and hide it](src/tests/android/uiautomator2/test_hide_keyboard.py)
 - [Push a file to device and pull it back](src/tests/android/uiautomator2/test_push_pull_file.py)
+- [Change device rotation between portrait and landscape](src/tests/android/uiautomator2/test_device_rotation.py)
+- [Change device network connection state](src/tests/android/uiautomator2/test_network_connection.py)
 
 ## Appium actions
 
