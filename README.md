@@ -8,7 +8,9 @@ This project provides examples on how appium can be used to automate an android/
 
 - Appium supports different drivers, plugins and clients, depending on your use case, you may want to take a look
   at [Appium docs](https://appium.io/docs/en/latest/ecosystem/)
-- Different Appium API methods can be found in docs [here](https://appium.io/docs/en/2.19/commands/base-driver/#getpagesource)
+- Different Appium API methods can be found in
+  docs [here](https://appium.io/docs/en/2.19/commands/base-driver/#getpagesource) and in
+  this [old docs version](https://appium.github.io/appium.io/docs/en/about-appium/getting-started/)
 
 ## Setup
 
@@ -87,7 +89,8 @@ for [test_app_opens.py](src/tests/android/uiautomator2/test_app_opens.py)
 ## Appium actions
 
 - tap
-- [scroll](src/tests/android/uiautomator2/test_scroll_and_type_text_in_textbox.py) shows how to use Android `UiScrollable` to scroll to an element
+- [scroll](src/tests/android/uiautomator2/test_scroll_and_type_text_in_textbox.py) shows how to use Android
+  `UiScrollable` to scroll to an element
 - enter_text
 - [drag_and_drop](src/tests/android/uiautomator2/test_long_press_and_drag_and_drop.py) shows how to long press and then
   drag and drop a UI component using ActionChains class
