@@ -8,7 +8,7 @@ This project provides examples on how appium can be used to automate an android/
 
 - Appium supports different drivers, plugins and clients, depending on your use case, you may want to take a look
   at [Appium docs](https://appium.io/docs/en/latest/ecosystem/)
-- Different Appium API methods can be found in docs [here](https://appium.readthedocs.io/en/stable/en/commands/README/)
+- Different Appium API methods can be found in docs [here](https://appium.io/docs/en/2.19/commands/base-driver/#getpagesource)
 
 ## Setup
 
@@ -82,6 +82,7 @@ for [test_app_opens.py](src/tests/android/uiautomator2/test_app_opens.py)
 - [Change device network connection state](src/tests/android/uiautomator2/test_network_connection.py)
 - [Change device location](src/tests/android/uiautomator2/test_change_device_location.py)
 - [Take screenshot](src/tests/android/uiautomator2/test_take_screenshot.py)
+- [Print page source](src/tests/android/uiautomator2/test_get_source.py
 
 ## Appium actions
 
