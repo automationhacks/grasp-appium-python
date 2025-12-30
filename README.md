@@ -86,6 +86,7 @@ for [test_app_opens.py](src/tests/android/uiautomator2/test_app_opens.py)
 - [Take screenshot](src/tests/android/uiautomator2/test_take_screenshot.py)
 - [Print page source](src/tests/android/uiautomator2/test_get_source.py)
 - [Record a video](src/tests/android/uiautomator2/test_record_video.py)
+- [Find element from a container element](src/tests/android/uiautomator2/test_find_element_from_element.py)
 
 ## Appium actions
 
