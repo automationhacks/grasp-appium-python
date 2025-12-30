@@ -84,7 +84,8 @@ for [test_app_opens.py](src/tests/android/uiautomator2/test_app_opens.py)
 - [Change device network connection state](src/tests/android/uiautomator2/test_network_connection.py)
 - [Change device location](src/tests/android/uiautomator2/test_change_device_location.py)
 - [Take screenshot](src/tests/android/uiautomator2/test_take_screenshot.py)
-- [Print page source](src/tests/android/uiautomator2/test_get_source.py
+- [Print page source](src/tests/android/uiautomator2/test_get_source.py)
+- [Record a video](src/tests/android/uiautomator2/test_record_video.py)
 
 ## Appium actions
 
