@@ -6,3 +6,6 @@ requires-python = ">=3.13"
 dependencies = [
     "appium-python-client>=5.2.4",
 ]
+
+[project.scripts]
+launch-inspector = "src.main.utils.appium_inspector_launcher:main"

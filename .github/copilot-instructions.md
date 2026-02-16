@@ -100,6 +100,34 @@ All tests follow this structure:
 - Each test file demonstrates a specific Appium recipe or capability
 - Single test class per file using `unittest.TestCase`
 
+## Agent Skills
+
+### Appium Inspector Launcher
+
+Cross-platform skill to automatically launch Appium Inspector for element identification.
+
+**Usage**:
+```bash
+# Command line
+python3 -m src.main.utils.appium_inspector_launcher
+
+# Or use helper script
+python3 scripts/launch_inspector.py
+
+# In Python code
+from src.main.utils.appium_inspector_launcher import AppiumInspectorLauncher
+launcher = AppiumInspectorLauncher(verbose=True)
+launcher.launch()
+```
+
+**Features**:
+- Auto-installs `appium-inspector` via npm if missing
+- Supports macOS, Linux, and Windows
+- Programmatic API for test fixtures
+- Optional verbose logging
+
+See [APPIUM_INSPECTOR_LAUNCHER.md](../../docs/APPIUM_INSPECTOR_LAUNCHER.md) for detailed documentation.
+
 ## Appium Documentation References
 
 - [Appium Ecosystem Drivers](https://appium.io/docs/en/latest/ecosystem/)
